@@ -1,0 +1,21 @@
+gedit ~/.profile
+export ENVIRONMENT=Dev
+save(ctrl+s)
+source ~/.profile
+echo $ENVIRONMENT
+Dev
+
+gedit ~/.profile
+alias cur="date"
+save
+source ~/.profile
+cur
+Thu Dec 12 08:15:32 AM EST 2024
+
+
+gedit ~/.profile
+alias cur="date"
+save
+source ~/.profile
+cur
+Thu Dec 12 08:15:32 AM EST 2024

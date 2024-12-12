@@ -1,0 +1,12 @@
+ls
+Desktop    Downloads  Music   Pictures  Public  Templates
+Documents  linux-vm   passwd  promt     snap    Videos
+stat promt
+File: promt
+  Size: 90        	Blocks: 8          IO Block: 4096   regular file
+Device: 805h/2053d	Inode: 1314501     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1001/     max)   Gid: ( 1001/     max)
+Access: 2024-12-12 08:02:28.505609601 -0500
+Modify: 2024-12-12 08:02:22.113609452 -0500
+Change: 2024-12-12 08:02:22.117609452 -0500
+ Birth: 2024-12-12 08:02:22.105609452 -0500
