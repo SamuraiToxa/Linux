@@ -1,0 +1,6 @@
+gedit ~/.bashrc
+#upd shell : (comment for me)
+PS1="[\d]\u@\h"
+save
+source ~/.bashrc
+[Thu Dec 12]max@ws01
