@@ -1,0 +1,2 @@
+systemctl get-default
+graphical.target

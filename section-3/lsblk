@@ -1,0 +1,75 @@
+sudo lshw
+[sudo] password for max: 
+a lot of no needed info...
+
+*-disk
+                description: ATA Disk
+                product: VBOX HARDDISK
+                vendor: VirtualBox
+                physical id: 0.0.0
+                bus info: scsi@2:0.0.0
+                logical name: /dev/sda
+                version: 1.0
+                serial: VB7698eb95-52b6fc02
+                size: 500GiB (536GB)
+                capabilities: gpt-1.00 partitioned partitioned:gpt
+                configuration: ansiversion=5 guid=9650cccb-2f48-4099-a388-92b727e16936 logicalsectorsize=512 sectorsize=512
+              *-volume:0
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 1
+                   bus info: scsi@2:0.0.0,1
+                   logical name: /dev/sda1
+                   logical name: /
+                   version: 1.0
+                   serial: b67edd03-5aa9-4826-add9-3de240b4c108
+                   size: 220GiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                   configuration: created=2022-04-22 20:32:04 filesystem=ext4 lastmountpoint=/ modified=2024-12-17 02:35:21 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2024-12-17 02:22:50 state=mounted
+              *-volume:1
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 2
+                   bus info: scsi@2:0.0.0,2
+                   logical name: /dev/sda2
+                   logical name: /boot
+                   version: 1.0
+                   serial: ae89c631-fbfd-4464-bd2a-f044d6f289fe
+                   size: 286MiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                   configuration: created=2022-04-22 20:32:06 filesystem=ext4 lastmountpoint=/boot modified=2024-12-17 02:35:22 mount.fstype=ext4 mount.options=rw,relatime mounted=2024-12-17 02:35:22 state=mounted
+              *-volume:2
+                   description: BIOS Boot partition
+                   vendor: EFI
+                   physical id: 3
+                   bus info: scsi@2:0.0.0,3
+                   logical name: /dev/sda3
+                   serial: 52cc4637-61a8-489e-906b-201e65e24e38
+                   capacity: 94MiB
+                   capabilities: nofs
+              *-volume:3
+                   description: Linux swap volume
+                   vendor: Linux
+                   physical id: 4
+                   bus info: scsi@2:0.0.0,4
+                   logical name: /dev/sda4
+                   version: 1
+                   serial: fea6d28a-87d8-4e12-90f8-127fb098d3ce
+                   size: 9152MiB
+                   capacity: 9154MiB
+                   capabilities: nofs swap initialized
+                   configuration: filesystem=swap pagesize=4095
+              *-volume:4
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 5
+                   bus info: scsi@2:0.0.0,5
+                   logical name: /dev/sda5
+                   logical name: /home
+                   version: 1.0
+                   serial: 16686029-ab4c-435d-b85a-282985baefda
+                   size: 270GiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                   configuration: created=2022-04-22 20:32:06 filesystem=ext4 lastmountpoint=/home modified=2024-12-17 02:35:22 mount.fstype=ext4 mount.options=rw,relatime mounted=2024-12-17 02:35:22 state=mounted
+
+answer - /dev
