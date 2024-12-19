@@ -1,0 +1,50 @@
+sudo dpkg -i /home/max/linux-vm/4/tor_0.3.2.10-1_amd64.deb 
+
+(Reading database ... 166121 files and directories currently installed.)
+Preparing to unpack .../4/tor_0.3.2.10-1_amd64.deb ...
+Unpacking tor (0.3.2.10-1) over (0.3.2.10-1) ...
+dpkg: dependency problems prevent configuration of tor:
+ tor depends on libevent-2.1-6 (>= 2.1.8-stable); however:
+  Package libevent-2.1-6 is not installed.
+ tor depends on libssl1.1 (>= 1.1.0); however:
+  Package libssl1.1 is not installed.
+# фейлится из-за того, что присутствует зависимость от других пакетов, которые не установлены на нашей системе 
+dpkg: error processing package tor (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for man-db (2.10.2-1) ...
+Errors were encountered while processing:
+ tor
+
+
+sudo apt-get install -f
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Correcting dependencies... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libmd4c0 libpcre2-16-0 libqt5core5a libqt5dbus5
+  libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5
+  libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5 libqt5widgets5
+  libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-gpg python3-packaging
+  python3-pyqt5 python3-pyqt5.sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  tor
+Suggested packages:
+  mixmaster torbrowser-launcher socat apparmor-utils nyx obfs4proxy
+The following packages will be upgraded:
+  tor
+1 upgraded, 0 newly installed, 0 to remove and 610 not upgraded.
+1 not fully installed or removed.
+Need to get 1,665 kB of archives.
+After this operation, 1,094 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 tor amd64 0.4.6.10-1 [1,665 kB]
+Fetched 1,665 kB in 2s (856 kB/s)                   
+(Reading database ... 166121 files and directories currently installed.)
+Preparing to unpack .../tor_0.4.6.10-1_amd64.deb ...
+Unpacking tor (0.4.6.10-1) over (0.3.2.10-1) ...
+Setting up tor (0.4.6.10-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+Done

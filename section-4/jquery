@@ -1,0 +1,52 @@
+max@ws01:~$ sudo apt-get update 
+
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 http://us.archive.ubuntu.com/ubuntu jammy InRelease                     
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]    
+Hit:4 http://us.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 257 kB in 1s (250 kB/s)
+Reading package lists... Done
+
+max@ws01:~$ apt-cache search highlight jquery
+
+libjs-jquery-datetimepicker - Date and Time Picker plugin for jQuery
+libjs-jquery-jush - jQuery Syntax Highlighter
+
+max@ws01:~$ sudo apt install libjs-jquery-jush
+
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libmd4c0 libpcre2-16-0 libqt5core5a libqt5dbus5
+  libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5
+  libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5 libqt5widgets5
+  libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-gpg python3-packaging
+  python3-pyqt5 python3-pyqt5.sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  javascript-common libjs-jquery
+The following NEW packages will be installed:
+  javascript-common libjs-jquery libjs-jquery-jush
+0 upgraded, 3 newly installed, 0 to remove and 610 not upgraded.
+Need to get 375 kB of archives.
+After this operation, 967 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 javascript-common all 11+nmu1 [5,936 B]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 libjs-jquery all 3.6.0+dfsg+~3.5.13-1 [321 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 libjs-jquery-jush all 12-3 [47.7 kB]
+Fetched 375 kB in 5s (80.9 kB/s)            
+Selecting previously unselected package javascript-common.
+(Reading database ... 166213 files and directories currently installed.)
+Preparing to unpack .../javascript-common_11+nmu1_all.deb ...
+Unpacking javascript-common (11+nmu1) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../libjs-jquery_3.6.0+dfsg+~3.5.13-1_all.deb ...
+Unpacking libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+Selecting previously unselected package libjs-jquery-jush.
+Preparing to unpack .../libjs-jquery-jush_12-3_all.deb ...
+Unpacking libjs-jquery-jush (12-3) ...
+Setting up javascript-common (11+nmu1) ...
+Setting up libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+Setting up libjs-jquery-jush (12-3) ...
+
