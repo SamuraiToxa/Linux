@@ -1,0 +1,32 @@
+apt show ansible
+Package: ansible
+Version: 2.10.7+merged+base+2.10.8+dfsg-1
+Priority: optional
+Section: universe/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Lee Garrett <debian@rocketjump.eu>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 204 MB
+Depends: python3-cryptography, python3-jinja2, python3-packaging, python3-yaml, python3:any, openssh-client | python3-paramiko (>= 2.6.0), python3-pycryptodome, python3-distutils, python3-dnspython, python3-httplib2, python3-netaddr
+Recommends: python3-argcomplete, python3-jmespath, python3-kerberos, python3-libcloud, python3-selinux, python3-winrm, python3-xmltodict
+Suggests: cowsay, sshpass
+Breaks: ansible-base (<= 2.10.5+dfsg-2)
+Replaces: ansible-base (<= 2.10.5+dfsg-2)
+Homepage: https://www.ansible.com
+Download-Size: 17.5 MB
+APT-Sources: http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages
+Description: Configuration management, deployment, and task execution system
+ Ansible is a radically simple model-driven configuration management,
+ multi-node deployment, and remote task execution system. Ansible works
+ over SSH and does not require any software or daemons to be installed
+ on remote nodes. Extension modules can be written in any language and
+ are transferred to managed machines automatically.
+ .
+ This package contains ansible-base 2.10.x and ansible-collections 2.10.x merged
+ into one package.
+
+
+
+Required info:
+Recommends: python3-argcomplete, python3-jmespath, python3-kerberos, python3-libcloud, python3-selinux, python3-winrm, python3-xmltodict
