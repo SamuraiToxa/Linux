@@ -1,0 +1,1 @@
+max@ws01:~$ grep -E '^[[:space:]]*[0-9]' docs/gzip/copyright > strings.txt

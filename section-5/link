@@ -1,0 +1,31 @@
+max@ws01:~$ ls -l
+total 68
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Desktop
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Documents
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Downloads
+drwxrwxr-x  2 max max 28672 Dec 22 06:19 empty
+drwxr-xr-x 12 max max  4096 Dec 10 07:23 linux-vm
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Music
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Pictures
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Public
+drwx------  3 max max  4096 Dec 10 07:23 snap
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Templates
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Videos
+max@ws01:~$ ln -s  ~/empty/file777 link_to_file777
+max@ws01:~$ cat link_to_file777
+You got me!
+max@ws01:~$ ls -l
+total 68
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Desktop
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Documents
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Downloads
+drwxrwxr-x  2 max max 28672 Dec 22 06:19 empty
+lrwxrwxrwx  1 max max    23 Dec 22 06:27 link_to_file777 -> /home/max/empty/file777
+drwxr-xr-x 12 max max  4096 Dec 10 07:23 linux-vm
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Music
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Pictures
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Public
+drwx------  3 max max  4096 Dec 10 07:23 snap
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Templates
+drwxr-xr-x  2 max max  4096 Dec 22 06:09 Videos
+
