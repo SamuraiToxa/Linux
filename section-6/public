@@ -1,0 +1,24 @@
+max@ws01:~$ ssh-keygen -t rsa -b 4096 -C "max"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/max/.ssh/id_rsa): public
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in public
+Your public key has been saved in public.pub
+The key fingerprint is:
+SHA256:4XxNeyV8kohUjTTSJpz4xB32KByEy6rANC3XeCiS/Z4 max
+The key's randomart image is:
++---[RSA 4096]----+
+|         *=**+   |
+|        oo*==*.. |
+| o . + ..++o+ * o|
+|o * = ooo..+ . = |
+| + * . .S . o .  |
+|  o . .  .   .   |
+|   o o           |
+|    E            |
+|                 |
++----[SHA256]-----+
+max@ws01:~$ cat ~/public.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDELLFXU4pCHi1huXlhYRnuAVjwFwQZIGlWLewMZJwvKiA12Xn5ly2BlIhG++yh72sOuaGyoPjSGBCi43Uzl+x9EeKGcEu0VsTlNnR/3afKO8ktD81i57J7/6UNZMdl8q+JP7hHsqnjh7FRJ7GqucNdx8yg1kDURYs3KrspaVNnFcKZsu76aQN2r6xul5DiXJlMjCHHc6ucAxCWeqZdeDA/CN3yp3pYrclzK8HsvY7/zD01ivCOdXpc/DbJw26x75fd9VWrdT58BPFh5lLnu/TeSraMxflh2/swZVR8F2iBCYzmzvcrepSiAlAqESwTHVnVc+NxXEF3L3HA/dnQzI2OH3DzTyQgtupPwt5ZP0ltLvXv3R8ytf7C9JPdReIbaTIKFgdi7RWysBozlL0lmAHzLgzUmPnhWLUL+TInZ6SFUbQxRstt/HgUbH9dGNaRzizfJYSnqH8gj6eOQPv2tRma1EMTPEL3ApKdfz2lwq9sOznQRQa134L2hMR+JsMNEEjwyO+CW+bS6k/QuQcPoxCz2uuoEv2yA48bVz+Dc1JPzVOBwHuB+g5A8UvANm0ea8B7u3p7RmOGekud44nQTCPal0ss3O8KR2ohkrH92ux4QfVFgaKhpWEQ8O36YDIqzNcwU8DcjTtXbcled3ilXiCS+28q5hoIP3+IiJHOX0n8tw== max
+

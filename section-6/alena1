@@ -1,0 +1,22 @@
+max@ws01:~$ sudo adduser alena
+[sudo] password for max: 
+Adding user `alena' ...
+Adding new group `alena' (1002) ...
+Adding new user `alena' (1002) with group `alena' ...
+Creating home directory `/home/alena' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for alena
+Enter the new value, or press ENTER for the default
+	Full Name []: Alena 
+	Room Number []: 1
+	Work Phone []: -
+	Home Phone []: -
+	Other []: 
+Is the information correct? [Y/n] y
+
+max@ws01:~$ id alena
+uid=1002(alena) gid=1002(alena) groups=1002(alena)
+
