@@ -1,0 +1,4 @@
+max@ws01:~$ sudo usermod -aG sudo alena
+max@ws01:~$ groups alena
+alena : alena sudo
+

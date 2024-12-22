@@ -1,0 +1,3 @@
+max@ws01:~$ sudo find ~/owner -type f -perm 400
+/home/max/owner/file541
+

@@ -1,0 +1,6 @@
+alena@ws01:/home/max$ sudo groupadd developers
+alena@ws01:/home/max$ sudo usermod -aG developers alena
+alena@ws01:/home/max$ sudo usermod -g developers alena
+alena@ws01:/home/max$ id alena
+uid=1002(alena) gid=1003(developers) groups=1003(developers),27(sudo)
+
