@@ -1,0 +1,5 @@
+max@ws01:~$ mkdir -p ~/empty/
+max@ws01:~$ for i in $(seq 1 1000); do fallocate -l 24 ~/empty/file$i; done; echo 'You got me!' > ~/empty/file777
+max@ws01:~$ cat ~/empty/file777
+You got me!
+

@@ -1,0 +1,21 @@
+max@ws01:~$ which gzip
+/usr/bin/gzip
+max@ws01:~$ locate gzip | grep doc
+/snap/core20/1405/usr/share/doc/gzip
+/snap/core20/1405/usr/share/doc/gzip/changelog.Debian.gz
+/snap/core20/1405/usr/share/doc/gzip/copyright
+/snap/core20/2434/usr/share/doc/gzip
+/snap/core20/2434/usr/share/doc/gzip/copyright
+/usr/share/doc/gzip
+/usr/share/doc/gzip/NEWS.gz
+/usr/share/doc/gzip/README.gz
+/usr/share/doc/gzip/TODO
+/usr/share/doc/gzip/changelog.Debian.gz
+/usr/share/doc/gzip/copyright
+/usr/share/vim/vim82/doc/pi_gzip.txt
+max@ws01:~$ sudo mkdir docs
+ax@ws01:~$ sudo cp -r /usr/share/doc/gzip/ ~/docs/
+max@ws01:~$ ls docs
+gzip
+max@ws01:~$ ls docs/gzip
+changelog.Debian.gz  copyright  NEWS.gz  README.gz  TODO
