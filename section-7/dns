@@ -1,0 +1,25 @@
+# /etc/nsswitch.conf
+#
+# Example configuration of GNU Name Service Switch functionality.
+# If you have the `glibc-doc-reference' and `info' packages installed, try:
+# `info libc "Name Service Switch"' for information about this file.
+
+passwd:         files systemd
+group:          files systemd
+shadow:         files
+gshadow:        files
+
+hosts:          dns mdns4_minimal [NOTFOUND=return] files
+networks:       files
+
+protocols:      db files
+services:       db files
+ethers:         db files
+rpc:            db files
+
+netgroup:       nis
+
+# max@ws01:~$ ping google.com
+#PING google.com (142.250.150.138) 56(84) bytes of data.
+#64 bytes from la-in-f138.1e100.net (142.250.150.138): icmp_seq=1 ttl=255 time=17.6 ms
+#64 bytes from la-in-f138.1e100.net (142.250.150.138): icmp_seq=2 ttl=255 time=17.6 ms
