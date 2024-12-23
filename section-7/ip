@@ -1,0 +1,4 @@
+max@ws01:~$ sudo ip addr add 172.20.236.10/24 dev enp0s8
+max@ws01:~$ ip route
+172.20.236.0/24 dev enp0s8 proto kernel scope link src 172.20.236.10
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.108 metric 101

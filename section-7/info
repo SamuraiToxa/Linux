@@ -1,0 +1,9 @@
+max@ws01:~$ traceroute ya.ru
+traceroute to ya.ru (77.88.44.242), 30 hops max, 60 byte packets
+ 1  _gateway (10.0.2.2)  0.268 ms  0.246 ms  0.239 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  *^C

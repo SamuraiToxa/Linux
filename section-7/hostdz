@@ -1,0 +1,18 @@
+max@ws01:~$ sudo nano /etc/hosts
+[sudo] password for max:
+#add 127.0.0.1 www.google.com
+
+max@ws01:~$ max@ws01:~$ ping www.google.com
+PING www.google.com (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.056 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.026 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.025 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.043 ms
+^X64 bytes from localhost (127.0.0.1): icmp_seq=5 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=6 ttl=64 time=0.027 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=7 ttl=64 time=0.026 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=8 ttl=64 time=0.028 ms
+^C
+--- www.google.com ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7527ms
+rtt min/avg/max/mdev = 0.025/0.032/0.056/0.010 ms

@@ -1,0 +1,2 @@
+max@ws01:~/linux-vm/7$  ip route
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.108 metric 101
