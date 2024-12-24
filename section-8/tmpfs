@@ -1,0 +1,23 @@
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           482M  1.5M  481M   1% /run
+/dev/sda1       217G  7.0G  199G   4% /
+tmpfs           2.4G     0  2.4G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       252M   84M  149M  37% /boot
+/dev/sda5       265G  204M  252G   1% /home
+tmpfs           482M   76K  482M   1% /run/user/127
+tmpfs           482M   68K  482M   1% /run/user/1001
+max@ws01:~$ sudo mkdir /mnt/tmp-data
+max@ws01:~$ sudo mount -t tmpfs -o size=100M tmpfs /mnt/tmp-data/
+max@ws01:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           482M  1.5M  481M   1% /run
+/dev/sda1       217G  7.0G  199G   4% /
+tmpfs           2.4G     0  2.4G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       252M   84M  149M  37% /boot
+/dev/sda5       265G  204M  252G   1% /home
+tmpfs           482M   76K  482M   1% /run/user/127
+tmpfs           482M   68K  482M   1% /run/user/1001
+tmpfs           100M     0  100M   0% /mnt/tmp-data
