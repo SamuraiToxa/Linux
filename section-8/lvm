@@ -1,0 +1,60 @@
+max@ws01:~$ sudo apt install lvm2
+max@ws01:~$ sudo pvcreate /dev/sdb
+  Physical volume "/dev/sdb" successfully created.
+max@ws01:~$ sudo pvs
+  PV         VG Fmt  Attr PSize  PFree
+  /dev/sdb      lvm2 ---  15.00g 15.00g 
+max@ws01:~$ sudo vgcreate volume1 /dev/sdb
+  Volume group "volume1" successfully created
+max@ws01:~$ sudo vgs
+  VG      #PV #LV #SN Attr   VSize   VFree
+  volume1   1   0   0 wz--n- <15.00g <15.00g
+max@ws01:~$ sudo lvcreate -n storage -l 100%p volume1
+  Logical volume "storage" created.
+max@ws01:~$ sudo lvs
+  LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  storage volume1 -wi-a----- <15.00g
+max@ws01:~$ lsblk
+NAME              MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0               7:0    0     4K  1 loop /snap/bare/5
+loop1               7:1    0  61.9M  1 loop /snap/core20/1405
+loop2               7:2    0  63.7M  1 loop /snap/core20/2434
+loop3               7:3    0 349.7M  1 loop /snap/gnome-3-38-2004/143
+loop4               7:4    0 155.6M  1 loop /snap/firefox/1232
+loop5               7:5    0 248.8M  1 loop /snap/gnome-3-38-2004/99
+loop6               7:6    0  45.9M  1 loop /snap/snap-store/575
+loop7               7:7    0  81.3M  1 loop /snap/gtk-common-themes/1534
+loop8               7:8    0  91.7M  1 loop /snap/gtk-common-themes/1535
+loop9               7:9    0   284K  1 loop /snap/snapd-desktop-integration/10
+loop10              7:10   0  44.3M  1 loop /snap/snapd/23258
+sda                 8:0    0   500G  0 disk
+├─sda1              8:1    0 220.6G  0 part /
+├─sda2              8:2    0   286M  0 part /boot
+├─sda3              8:3    0    95M  0 part
+├─sda4              8:4    0   8.9G  0 part [SWAP]
+└─sda5              8:5    0 270.1G  0 part /home
+sdb                 8:16   0    15G  0 disk
+└─volume1-storage 253:0    0    15G  0 lvm
+sdc                 8:32   0    25G  0 disk
+sdd                 8:48   1  58.8G  0 disk
+└─sdd1              8:49   1  58.7G  0 part
+sr0                11:0    1  1024M  0 rom
+
+restart
+
+max@ws01:~$ sudo apt install -y xfsprogs
+max@ws01:~$ sudo mkfs.xfs /dev/volume1/storage
+meta-data=/dev/volume1/storage   isize=512    agcount=4, agsize=982784 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=0 inobtcount=0
+data     =                       bsize=4096   blocks=3931136, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+max@ws01:~$ sudo mkdir /storage
+max@ws01:~$ sudo mount /dev/volume1/storage /storage
+max@ws01:~$ sudo nano /etc/fstab #add /dev/volume1/storage    /storage        xfs     defaults        0       0
+max@ws01:~$ sudo shutdown now --reboot

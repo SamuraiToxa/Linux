@@ -1,0 +1,4 @@
+# если на диске есть инфо, то сначала
+sudo mkfs.ext4 /dev/vdb1
+# теперь удаляем
+sudo lvremove /dev/vdb1 
