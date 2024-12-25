@@ -1,0 +1,3 @@
+sudo systemctl enable mariadb.service
+#и потом сделать проверку службы
+sudo systemctl status mariadb.service

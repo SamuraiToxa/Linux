@@ -1,0 +1,169 @@
+#SSH-демон 
+max@ws01:~$ sudo lsof -p 768 | grep REG
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/127/gvfs
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.portal file system /run/user/127/doc
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1001/gvfs
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.portal file system /run/user/1001/doc
+      Output information may be incomplete.
+sshd    768 root  txt    REG                8,1   917192 7340344 /usr/sbin/sshd
+sshd    768 root  mem    REG                8,1   149760 7346610 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1
+sshd    768 root  mem    REG                8,1   178816 7347346 /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+sshd    768 root  mem    REG                8,1    68552 7347175 /usr/lib/x86_64-linux-gnu/libresolv.so.2
+sshd    768 root  mem    REG                8,1    22600 7346825 /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+sshd    768 root  mem    REG                8,1    52080 7346833 /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+sshd    768 root  mem    REG                8,1   182928 7346823 /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+sshd    768 root  mem    REG                8,1   613064 7347075 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.4
+sshd    768 root  mem    REG                8,1  1296312 7346528 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4
+sshd    768 root  mem    REG                8,1    39024 7346239 /usr/lib/x86_64-linux-gnu/libcap.so.2.44
+sshd    768 root  mem    REG                8,1   125152 7346862 /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3
+sshd    768 root  mem    REG                8,1   841808 7347577 /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+sshd    768 root  mem    REG                8,1   170456 7346864 /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+sshd    768 root  mem    REG                8,1    27072 7346237 /usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
+sshd    768 root  mem    REG                8,1    93280 7346987 /usr/lib/x86_64-linux-gnu/libnsl.so.2.0.1
+sshd    768 root  mem    REG                8,1  2216304 7346216 /usr/lib/x86_64-linux-gnu/libc.so.6
+sshd    768 root  mem    REG                8,1    18504 7346292 /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+sshd    768 root  mem    REG                8,1   828000 7346831 /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+sshd    768 root  mem    REG                8,1   338712 7346643 /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+sshd    768 root  mem    REG                8,1   166280 7347227 /usr/lib/x86_64-linux-gnu/libselinux.so.1
+sshd    768 root  mem    REG                8,1   198664 7346296 /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0
+sshd    768 root  mem    REG                8,1   108936 7347569 /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+sshd    768 root  mem    REG                8,1  4447536 7346297 /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+sshd    768 root  mem    REG                8,1   807936 7347311 /usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0
+sshd    768 root  mem    REG                8,1    67736 7347034 /usr/lib/x86_64-linux-gnu/libpam.so.0.85.1
+sshd    768 root  mem    REG                8,1   133200 7346142 /usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0
+sshd    768 root  mem    REG                8,1    44872 7347493 /usr/lib/x86_64-linux-gnu/libwrap.so.0.7.6
+sshd    768 root  mem    REG                8,1   240936 7345879 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+max@ws01:~$ sudo lsof -c ssh | grep REG
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/127/gvfs
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.portal file system /run/user/127/doc
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1001/gvfs
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.portal file system /run/user/1001/doc
+      Output information may be incomplete.
+sshd     768 root  txt    REG                8,1   917192 7340344 /usr/sbin/sshd
+sshd     768 root  mem    REG                8,1   149760 7346610 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1
+sshd     768 root  mem    REG                8,1   178816 7347346 /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+sshd     768 root  mem    REG                8,1    68552 7347175 /usr/lib/x86_64-linux-gnu/libresolv.so.2
+sshd     768 root  mem    REG                8,1    22600 7346825 /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+sshd     768 root  mem    REG                8,1    52080 7346833 /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+sshd     768 root  mem    REG                8,1   182928 7346823 /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+sshd     768 root  mem    REG                8,1   613064 7347075 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.4
+sshd     768 root  mem    REG                8,1  1296312 7346528 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4
+sshd     768 root  mem    REG                8,1    39024 7346239 /usr/lib/x86_64-linux-gnu/libcap.so.2.44
+sshd     768 root  mem    REG                8,1   125152 7346862 /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3
+sshd     768 root  mem    REG                8,1   841808 7347577 /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+sshd     768 root  mem    REG                8,1   170456 7346864 /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+sshd     768 root  mem    REG                8,1    27072 7346237 /usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
+sshd     768 root  mem    REG                8,1    93280 7346987 /usr/lib/x86_64-linux-gnu/libnsl.so.2.0.1
+sshd     768 root  mem    REG                8,1  2216304 7346216 /usr/lib/x86_64-linux-gnu/libc.so.6
+sshd     768 root  mem    REG                8,1    18504 7346292 /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+sshd     768 root  mem    REG                8,1   828000 7346831 /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+sshd     768 root  mem    REG                8,1   338712 7346643 /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+sshd     768 root  mem    REG                8,1   166280 7347227 /usr/lib/x86_64-linux-gnu/libselinux.so.1
+sshd     768 root  mem    REG                8,1   198664 7346296 /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0
+sshd     768 root  mem    REG                8,1   108936 7347569 /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+sshd     768 root  mem    REG                8,1  4447536 7346297 /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+sshd     768 root  mem    REG                8,1   807936 7347311 /usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0
+sshd     768 root  mem    REG                8,1    67736 7347034 /usr/lib/x86_64-linux-gnu/libpam.so.0.85.1
+sshd     768 root  mem    REG                8,1   133200 7346142 /usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0
+sshd     768 root  mem    REG                8,1    44872 7347493 /usr/lib/x86_64-linux-gnu/libwrap.so.0.7.6
+sshd     768 root  mem    REG                8,1   240936 7345879 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+sshd    1498 root  txt    REG                8,1   917192 7340344 /usr/sbin/sshd
+sshd    1498 root  mem    REG                8,1   309600 7347001 /usr/lib/x86_64-linux-gnu/libnss_systemd.so.2
+sshd    1498 root  mem    REG                8,1    30712 8000974 /usr/lib/x86_64-linux-gnu/security/pam_gnome_keyring.so
+sshd    1498 root  mem    REG                8,1    18424 8000965 /usr/lib/x86_64-linux-gnu/security/pam_env.so
+sshd    1498 root  mem    REG                8,1    26696 8000979 /usr/lib/x86_64-linux-gnu/security/pam_limits.so
+sshd    1498 root  mem    REG                8,1    18528 7347036 /usr/lib/x86_64-linux-gnu/libpam_misc.so.0.82.1
+sshd    1498 root  mem    REG                8,1    18424 8000983 /usr/lib/x86_64-linux-gnu/security/pam_mail.so
+sshd    1498 root  mem    REG                8,1    18424 8000985 /usr/lib/x86_64-linux-gnu/security/pam_motd.so
+sshd    1498 root  mem    REG                8,1   472008 8001002 /usr/lib/x86_64-linux-gnu/security/pam_systemd.so
+sshd    1498 root  mem    REG                8,1    14328 8001006 /usr/lib/x86_64-linux-gnu/security/pam_umask.so
+sshd    1498 root  mem    REG                8,1    14328 8000977 /usr/lib/x86_64-linux-gnu/security/pam_keyinit.so
+sshd    1498 root  mem    REG                8,1    14328 8000982 /usr/lib/x86_64-linux-gnu/security/pam_loginuid.so
+sshd    1498 root  mem    REG                8,1    26616 8000994 /usr/lib/x86_64-linux-gnu/security/pam_selinux.so
+sshd    1498 root  mem    REG                8,1    14328 8000981 /usr/lib/x86_64-linux-gnu/security/pam_localuser.so
+sshd    1498 root  mem    REG                8,1    14328 8000987 /usr/lib/x86_64-linux-gnu/security/pam_nologin.so
+sshd    1498 root  mem    REG                8,1    14328 8000960 /usr/lib/x86_64-linux-gnu/security/pam_cap.so
+sshd    1498 root  mem    REG                8,1    14328 8000988 /usr/lib/x86_64-linux-gnu/security/pam_permit.so
+sshd    1498 root  mem    REG                8,1    13960 8000963 /usr/lib/x86_64-linux-gnu/security/pam_deny.so
+sshd    1498 root  mem    REG                8,1    59464 8001007 /usr/lib/x86_64-linux-gnu/security/pam_unix.so
+sshd    1498 root  mem    REG                8,1   149760 7346610 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1
+sshd    1498 root  mem    REG                8,1   178816 7347346 /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+sshd    1498 root  mem    REG                8,1    68552 7347175 /usr/lib/x86_64-linux-gnu/libresolv.so.2
+sshd    1498 root  mem    REG                8,1    22600 7346825 /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+sshd    1498 root  mem    REG                8,1    52080 7346833 /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+sshd    1498 root  mem    REG                8,1   182928 7346823 /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+sshd    1498 root  mem    REG                8,1   613064 7347075 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.4
+sshd    1498 root  mem    REG                8,1  1296312 7346528 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4
+sshd    1498 root  mem    REG                8,1    39024 7346239 /usr/lib/x86_64-linux-gnu/libcap.so.2.44
+sshd    1498 root  mem    REG                8,1   125152 7346862 /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3
+sshd    1498 root  mem    REG                8,1   841808 7347577 /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+sshd    1498 root  mem    REG                8,1   170456 7346864 /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+sshd    1498 root  mem    REG                8,1    27072 7346237 /usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
+sshd    1498 root  mem    REG                8,1    93280 7346987 /usr/lib/x86_64-linux-gnu/libnsl.so.2.0.1
+sshd    1498 root  mem    REG                8,1  2216304 7346216 /usr/lib/x86_64-linux-gnu/libc.so.6
+sshd    1498 root  mem    REG                8,1    18504 7346292 /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+sshd    1498 root  mem    REG                8,1   828000 7346831 /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+sshd    1498 root  mem    REG                8,1   338712 7346643 /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+sshd    1498 root  mem    REG                8,1   166280 7347227 /usr/lib/x86_64-linux-gnu/libselinux.so.1
+sshd    1498 root  mem    REG                8,1   198664 7346296 /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0
+sshd    1498 root  mem    REG                8,1   108936 7347569 /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+sshd    1498 root  mem    REG                8,1  4447536 7346297 /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+sshd    1498 root  mem    REG                8,1   807936 7347311 /usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0
+sshd    1498 root  mem    REG                8,1    67736 7347034 /usr/lib/x86_64-linux-gnu/libpam.so.0.85.1
+sshd    1498 root  mem    REG                8,1   133200 7346142 /usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0
+sshd    1498 root  mem    REG                8,1    44872 7347493 /usr/lib/x86_64-linux-gnu/libwrap.so.0.7.6
+sshd    1498 root  mem    REG                8,1    51928 8000998 /usr/lib/x86_64-linux-gnu/security/pam_sss.so
+sshd    1498 root  mem    REG                8,1   240936 7345879 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+sshd    1657  max  txt    REG                8,1   917192 7340344 /usr/sbin/sshd
+sshd    1657  max  mem    REG                8,1   309600 7347001 /usr/lib/x86_64-linux-gnu/libnss_systemd.so.2
+sshd    1657  max  mem    REG                8,1    30712 8000974 /usr/lib/x86_64-linux-gnu/security/pam_gnome_keyring.so
+sshd    1657  max  mem    REG                8,1    18424 8000965 /usr/lib/x86_64-linux-gnu/security/pam_env.so
+sshd    1657  max  mem    REG                8,1    26696 8000979 /usr/lib/x86_64-linux-gnu/security/pam_limits.so
+sshd    1657  max  mem    REG                8,1    18528 7347036 /usr/lib/x86_64-linux-gnu/libpam_misc.so.0.82.1
+sshd    1657  max  mem    REG                8,1    18424 8000983 /usr/lib/x86_64-linux-gnu/security/pam_mail.so
+sshd    1657  max  mem    REG                8,1    18424 8000985 /usr/lib/x86_64-linux-gnu/security/pam_motd.so
+sshd    1657  max  mem    REG                8,1   472008 8001002 /usr/lib/x86_64-linux-gnu/security/pam_systemd.so
+sshd    1657  max  mem    REG                8,1    14328 8001006 /usr/lib/x86_64-linux-gnu/security/pam_umask.so
+sshd    1657  max  mem    REG                8,1    14328 8000977 /usr/lib/x86_64-linux-gnu/security/pam_keyinit.so
+sshd    1657  max  mem    REG                8,1    14328 8000982 /usr/lib/x86_64-linux-gnu/security/pam_loginuid.so
+sshd    1657  max  mem    REG                8,1    26616 8000994 /usr/lib/x86_64-linux-gnu/security/pam_selinux.so
+sshd    1657  max  mem    REG                8,1    14328 8000981 /usr/lib/x86_64-linux-gnu/security/pam_localuser.so
+sshd    1657  max  mem    REG                8,1    14328 8000987 /usr/lib/x86_64-linux-gnu/security/pam_nologin.so
+sshd    1657  max  mem    REG                8,1    14328 8000960 /usr/lib/x86_64-linux-gnu/security/pam_cap.so
+sshd    1657  max  mem    REG                8,1    14328 8000988 /usr/lib/x86_64-linux-gnu/security/pam_permit.so
+sshd    1657  max  mem    REG                8,1    13960 8000963 /usr/lib/x86_64-linux-gnu/security/pam_deny.so
+sshd    1657  max  mem    REG                8,1    59464 8001007 /usr/lib/x86_64-linux-gnu/security/pam_unix.so
+sshd    1657  max  mem    REG                8,1   149760 7346610 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1
+sshd    1657  max  mem    REG                8,1   178816 7347346 /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+sshd    1657  max  mem    REG                8,1    68552 7347175 /usr/lib/x86_64-linux-gnu/libresolv.so.2
+sshd    1657  max  mem    REG                8,1    22600 7346825 /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+sshd    1657  max  mem    REG                8,1    52080 7346833 /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+sshd    1657  max  mem    REG                8,1   182928 7346823 /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+sshd    1657  max  mem    REG                8,1   613064 7347075 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.4
+sshd    1657  max  mem    REG                8,1  1296312 7346528 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4
+sshd    1657  max  mem    REG                8,1    39024 7346239 /usr/lib/x86_64-linux-gnu/libcap.so.2.44
+sshd    1657  max  mem    REG                8,1   125152 7346862 /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3
+sshd    1657  max  mem    REG                8,1   841808 7347577 /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+sshd    1657  max  mem    REG                8,1   170456 7346864 /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+sshd    1657  max  mem    REG                8,1    27072 7346237 /usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
+sshd    1657  max  mem    REG                8,1    93280 7346987 /usr/lib/x86_64-linux-gnu/libnsl.so.2.0.1
+sshd    1657  max  mem    REG                8,1  2216304 7346216 /usr/lib/x86_64-linux-gnu/libc.so.6
+sshd    1657  max  mem    REG                8,1    18504 7346292 /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+sshd    1657  max  mem    REG                8,1   828000 7346831 /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+sshd    1657  max  mem    REG                8,1   338712 7346643 /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+sshd    1657  max  mem    REG                8,1   166280 7347227 /usr/lib/x86_64-linux-gnu/libselinux.so.1
+sshd    1657  max  mem    REG                8,1   198664 7346296 /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0
+sshd    1657  max  mem    REG                8,1   108936 7347569 /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+sshd    1657  max  mem    REG                8,1  4447536 7346297 /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+sshd    1657  max  mem    REG                8,1   807936 7347311 /usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0
+sshd    1657  max  mem    REG                8,1    67736 7347034 /usr/lib/x86_64-linux-gnu/libpam.so.0.85.1
+sshd    1657  max  mem    REG                8,1   133200 7346142 /usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0
+sshd    1657  max  mem    REG                8,1    44872 7347493 /usr/lib/x86_64-linux-gnu/libwrap.so.0.7.6
+sshd    1657  max  mem    REG                8,1    51928 8000998 /usr/lib/x86_64-linux-gnu/security/pam_sss.so
+sshd    1657  max  mem    REG                8,1   240936 7345879 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

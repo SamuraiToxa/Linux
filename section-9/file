@@ -1,0 +1,7 @@
+#можно так же как и в предыдущем задании
+max@ws01:~$ sudo systemctl status sshd
+#или
+max@ws01:~$ max@ws01:~$ which sshd
+/usr/sbin/sshd
+#max@ws01:~$ which ssh
+/usr/bin/ssh
