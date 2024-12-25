@@ -1,0 +1,44 @@
+max@ws01:~$ sudo ps aux | grep sshdd
+max         2061  0.0  0.0  17732  2380 pts/0    R+   03:09   0:00 grep --color=auto sshdd  #процессы связанные с SSH-демоном
+max@ws01:~$ sudo systemctl status sshd
+#все процессы связанные с SSH-демоном
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2024-12-25 03:00:26 EST; 3min 52s ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 754 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 768 (sshd)
+      Tasks: 1 (limit: 5697)
+     Memory: 6.1M
+        CPU: 42ms
+     CGroup: /system.slice/ssh.service
+             └─768 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Dec 25 03:00:26 ws01 systemd[1]: Starting OpenBSD Secure Shell server...
+Dec 25 03:00:26 ws01 sshd[768]: Server listening on 0.0.0.0 port 22.
+Dec 25 03:00:26 ws01 sshd[768]: Server listening on :: port 22.
+Dec 25 03:00:26 ws01 systemd[1]: Started OpenBSD Secure Shell server.
+Dec 25 03:00:55 ws01 sshd[1498]: Accepted password for max from fe80::c0b3:5505:a13c:f161%enp0s8 port 53432 ssh2
+Dec 25 03:00:55 ws01 sshd[1498]: pam_unix(sshd:session): session opened for user max(uid=1001) by (uid=0)
+
+max@ws01:~$ sudo service sshd status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2024-12-25 03:00:26 EST; 4min 19s ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 754 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 768 (sshd)
+      Tasks: 1 (limit: 5697)
+     Memory: 6.1M
+        CPU: 42ms
+     CGroup: /system.slice/ssh.service
+             └─768 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Dec 25 03:00:26 ws01 systemd[1]: Starting OpenBSD Secure Shell server...
+Dec 25 03:00:26 ws01 sshd[768]: Server listening on 0.0.0.0 port 22.
+Dec 25 03:00:26 ws01 sshd[768]: Server listening on :: port 22.
+Dec 25 03:00:26 ws01 systemd[1]: Started OpenBSD Secure Shell server.
+Dec 25 03:00:55 ws01 sshd[1498]: Accepted password for max from fe80::c0b3:5505:a13c:f161%enp0s8 port 53432 ssh2
+Dec 25 03:00:55 ws01 sshd[1498]: pam_unix(sshd:session): session opened for user max(uid=1001) by (uid=0)
